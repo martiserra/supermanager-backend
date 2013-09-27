@@ -9,5 +9,8 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require lungo
+ *= require lungo.icon
+ *= require theme.lungo
  *= require_tree .
  */

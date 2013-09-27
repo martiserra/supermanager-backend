@@ -1,14 +1,47 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="Supermanager">
 <head>
   <title>SupermanagerBackend</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application", controller_name %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="app">
+	<section id="main">
+	    <header class="title">
+	        <nav class="left">
+	            <a href="#menu" data-router="aside"  data-icon="menu"></a>
+	        </nav>
+	        <nav class="right">
+	            <a href="#contact-section" data-router="section" data-icon="info" data-async="app/resources/sections/contact.html" data-transaction="cover"></a>
+	        </nav>
+			<h1 class="centered title"> SuperManager ACB </h1>
+	    </header>
 
-<%= yield %>
+	    <article id="main-article" class="active list indented scroll">
+	    	<%= yield %>
+		</article>
+		<aside id="menu" >
+		    <header data-title="menu"></header>
+		    <article class="active list">
+		            <li>
+		                <a href="#clients" data-router="section">
+		                    <strong>Clients</strong>
+		            </li>
+		    </article>
+		</aside> 
+	</section>
 
+    <!-- Javascript - Dependencies -->
+    <script src="assets/QuoJS/quo.js"></script>
+    <script src="assets/lungo/lungo.debug.js"></script>
+
+    <!-- Lungo - Sandbox App -->
+    <script>
+        Lungo.init({
+        });
+    </script>
+    
 </body>
 </html>
+
