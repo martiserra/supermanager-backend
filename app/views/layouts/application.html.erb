@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="app">
-	<section id="main">
+	<section id="main" data-transition="slide" data-transition-origin="slide">
 	    <header class="title">
 	        <nav class="left">
 	            <a href="#menu" data-router="aside"  data-icon="menu"></a>
@@ -18,19 +18,38 @@
 			<h1 class="centered title"> SuperManager ACB </h1>
 	    </header>
 
-	    <article id="main-article" class="active list indented scroll">
+	    <article id="main-article" class="active list scroll">
 	    	<%= yield %>
 		</article>
-		<aside id="menu" >
-		    <header data-title="menu"></header>
-		    <article class="active list">
-		            <li>
-		                <a href="#clients" data-router="section">
-		                    <strong>Clients</strong>
-		            </li>
-		    </article>
-		</aside> 
+		
 	</section>
+	<aside id="menu">
+	    <header data-title="Opciones"></header>
+	    <article class="active list">
+	    	<ul>
+	            <li>
+	                <a href="#clients" data-icon="users">
+	                    <strong>Mis Equipos</strong>
+	                </a>
+	            </li>
+	            <li>
+	            	<a href="#clients" data-icon="brand dribbble">
+	                    <strong>Ligas Privadas</strong>
+	                </a>
+	            </li>
+	            <li>
+	                <a href="#clients" data-icon="cart">
+	                    <strong>Mercado</strong>
+	                </a>
+	            </li>
+	            <li>
+	            	<a href="#clients" data-icon="bars">
+	                    <strong>Clasificaciones</strong>
+	                </a>
+	            </li>
+	        </ul>
+	    </article>
+	</aside> 
 
     <!-- Javascript - Dependencies -->
     <script src="assets/QuoJS/quo.js"></script>

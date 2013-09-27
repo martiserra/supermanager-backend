@@ -1,6 +1,12 @@
 <ul>
-  <li ng-repeat="team in data.teams">
-      <strong><a ng-click="viewTeam(team.id)">{{ team.name }}</a></strong>
-      <small>{{ team.points }}, {{ team.position }}, {{ team.balance }}<small>
+  <li class="arrow" ng-repeat="team in data.teams">
+      <strong><a ng-click="viewTeam(team.id)" class="text bold">{{ team.name }}</a></strong>
+      <small>
+      	<span class="text bold"> Jornada: </span><span> {{ team.points }} ({{ team.position }}º) </span> 
+      	<span class="text bold"> General: </span><span> {{ team.points }} ({{ team.position }}º) </span>
+      </small> 
+      <small>
+      	<span class="text bold"> Broker: </span><span> {{ team.balance }} (2º) </span> 
+      <small>
   </li>
 </ul>

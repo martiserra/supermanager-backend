@@ -11,6 +11,7 @@
  *= require_self
  *= require lungo
  *= require lungo.icon
+ *= require lungo.icon.brand
  *= require theme.lungo
  *= require_tree .
  */
