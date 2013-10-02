@@ -32,6 +32,15 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+  gem "factory_girl_rails", "~> 4.0"
+  gem 'database_cleaner'
+  gem 'capybara-webkit'
+  gem 'faker'
+
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
